@@ -1,0 +1,1856 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MobileOptimized" content="width"><meta name="HandheldFriendly" content="true">
+    <meta http-equiv="cleartype" content="on">
+    <title>Second Rishta</title>
+    <link href="css/form.css" rel="stylesheet" type="text/css" />
+   <!-- <link href="css/form1.css" rel="stylesheet" type="text/css" />
+    <link href="css/media.css" rel="stylesheet" type="text/css" />-->
+  </head>
+  <body class="zf-backgroundBg">
+    <div class="zf-templateWidth">
+      <form
+        action="/api/v1/users"
+        name="form"
+        class="detail-form"
+        method="POST"
+        onSubmit=""
+        accept-charset="UTF-8"
+        enctype="multipart/form-data"
+        id="form"
+      >
+        <div class="zf-templateWrapper">
+          <ul class="zf-tempHeadBdr">
+            <li class="zf-tempHeadContBdr">
+              <h2 class="zf-frmTitle"><em>Second Rishta</em></h2>
+              <p class="zf-frmDesc"></p>
+              <div class="zf-clearBoth"></div>
+            </li>
+          </ul>
+          <div class="zf-subContWrap zf-topAlign">
+            <ul>
+              <li class="zf-tempFrmWrapper zf-section">
+                <h2>Basic Information</h2>
+                <p>Please fill in your basic information as requested.</p>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Name
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="Name"
+                      checktype="c1"
+                      value=""
+                      id="Name"
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper">
+                <label class="zf-labelName"
+                  >Image Upload
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    name="file"
+                    checktype="c1"
+                    required
+                  />
+                  <p><img id="output" width="200" /></p>
+                  <!--<script>
+                     function toDataURL(src, callback, outputFormat) {
+          var img = new Image();
+          img.crossOrigin = 'Anonymous';
+          img.onload = function() {
+            var canvas = document.createElement('CANVAS');
+            var ctx = canvas.getContext('2d');
+            var dataURL;
+            canvas.height = this.naturalHeight;
+            canvas.width = this.naturalWidth;
+            ctx.drawImage(this, 0, 0);
+            dataURL = canvas.toDataURL(outputFormat);
+            callback(dataURL);
+          };
+          img.src = src;
+          if (img.complete || img.complete === undefined) {
+            img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+            img.src = src;
+          }
+        }
+        
+        var loadFile = function(event) {
+                    var image = document.getElementById('output');
+                    image.src = URL.createObjectURL(event.target.files[0]);
+
+                    toDataURL(
+                      URL.createObjectURL(event.target.files[0]),
+                      function(dataUrl) {
+                        console.log('RESULT:', dataUrl);
+                        dataUr = dataUrl;
+                      }
+                    )
+
+                  }; -->
+                  </script>
+                  <p
+                    id="file_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Choose any file for this field.
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Phone
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv zf-phonefld">
+                  <div class="zf-phwrapper">
+                    <span>
+                      <input
+                      type="tel"
+                      name="MobileNumber"
+                      minlength="10"
+                      maxlength="10"
+                      checktype="c7"
+                      onkeypress="return isNumberKey(event)"
+                      value=""
+                      id="pn"
+                      phoneFormat="1"
+                      isCountryCodeEnabled="true"
+                      fieldType="11"
+                      id="PhoneNumber"
+                      phoneFormatType="2"
+                      valType="number"
+                      required
+                  />
+                      <label>Number</label>
+                    </span>
+                    <div class="zf-clearBoth"></div>
+                  </div>
+                  <p
+                    id="PhoneNumber_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-date">
+                <label class="zf-labelName"
+                  >Date of Birth
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="date"
+                      name="DOB"
+                      checktype="c4"
+                      value=""
+                      maxlength="25"
+                      required
+                    /><label>dd-MM-yyyy</label>
+                  </span>
+                  <div class="zf-clearBoth"></div>
+                  <p
+                    id="Date_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Marital Status
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="MaritalStatus" checktype="c1"
+                    required>
+                    <option value="Never Married">Never Married</option>
+                    <option value="Awaiting Divorce">Awaiting Divorce</option>
+                    <option value="Divorced">Divorced</option>
+                    <option value="Widowed">Widowed</option>
+                    <option value="Annulled">Annulled</option>
+                  </select>
+                  <p
+                    id="Dropdown_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-radio zf-tempFrmWrapper zf-sideBySide">
+                <label class="zf-labelName"
+                  >Gender
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <div class="zf-overflow">
+                    <div class="zf-tempContDiv">
+                        <select class="zf-form-sBox" name="Gender" checktype="c1"
+                          required>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                        </select>
+                    <div class="zf-clearBoth"></div>
+                  </div>
+                  <p
+                    id="Radio_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Height
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="Height" checktype="c1"
+                    required>
+                    <option value="4 ft (122 cm)">4 ft (122 cm)</option>
+                    <option value="4 ft 1 inch (124 cm)"
+                      >4 ft 1 inch (124 cm)</option
+                    >
+                    <option value="4 ft 2 inch (128 cm)"
+                      >4 ft 2 inch (128 cm)</option
+                    >
+                    <option value="4 ft 3 inch (131 cm)"
+                      >4 ft 3 inch (131 cm)</option
+                    >
+                    <option value="4 ft 4 inch (134 cm)"
+                      >4 ft 4 inch (134 cm)</option
+                    >
+                    <option value="4 ft 5 inch (135 cm)"
+                      >4 ft 5 inch (135 cm)</option
+                    >
+                    <option value="4 ft 6 inch (137 cm)"
+                      >4 ft 6 inch (137 cm)</option
+                    >
+                    <option value="4 ft 7 inch (140 cm)"
+                      >4 ft 7 inch (140 cm)</option
+                    >
+                    <option value="4 ft 8 inch (142 cm)"
+                      >4 ft 8 inch (142 cm)</option
+                    >
+                    <option value="4 ft 9 inch (145 cm)"
+                      >4 ft 9 inch (145 cm)</option
+                    >
+                    <option value="4 ft 10 inch (147 cm)"
+                      >4 ft 10 inch (147 cm)</option
+                    >
+                    <option value="4 ft 11 inch (150 cm)"
+                      >4 ft 11 inch (150 cm)</option
+                    >
+                    <option value="5 ft (152 cm)">5 ft (152 cm)</option>
+                    <option value="5 ft 1 inch (155 cm)"
+                      >5 ft 1 inch (155 cm)</option
+                    >
+                    <option value="5 ft 2 inch (158 cm)"
+                      >5 ft 2 inch (158 cm)</option
+                    >
+                    <option value="5 ft 3 inch (160 cm)"
+                      >5 ft 3 inch (160 cm)</option
+                    >
+                    <option value="5 ft 4 inch (163 cm)"
+                      >5 ft 4 inch (163 cm)</option
+                    >
+                    <option value="5 ft 5 inch (165 cm)"
+                      >5 ft 5 inch (165 cm)</option
+                    >
+                    <option value="5 ft 6 inch (168 cm)"
+                      >5 ft 6 inch (168 cm)</option
+                    >
+                    <option value="5 ft 7 inch (170 cm)"
+                      >5 ft 7 inch (170 cm)</option
+                    >
+                    <option value="5 ft 8 inch (173 cm)"
+                      >5 ft 8 inch (173 cm)</option
+                    >
+                    <option value="5 ft 9 inch (175 cm)"
+                      >5 ft 9 inch (175 cm)</option
+                    >
+                    <option value="5 ft 10 inch (178 cm)"
+                      >5 ft 10 inch (178 cm)</option
+                    >
+                    <option value="5 ft 11 inch (180 cm)"
+                      >5 ft 11 inch (180 cm)</option
+                    >
+                    <option value="6 ft (183 cm)">6 ft (183 cm)</option>
+                    <option value="6 ft 1 inch (185 cm)"
+                      >6 ft 1 inch (185 cm)</option
+                    >
+                    <option value="6 ft 2 inch (188 cm)"
+                      >6 ft 2 inch (188 cm)</option
+                    >
+                    <option value="6 ft 3 inch (191 cm)"
+                      >6 ft 3 inch (191 cm)</option
+                    >
+                    <option value="6 ft 4 inch (193 cm)"
+                      >6 ft 4 inch (193 cm)</option
+                    >
+                    <option value="6 ft 5 inch (196 cm)"
+                      >6 ft 5 inch (196 cm)</option
+                    >
+                    <option value="6 ft 6 inch (198 cm)"
+                      >6 ft 6 inch (198 cm)</option
+                    >
+                    <option value="6 ft 7 inch (201 cm)"
+                      >6 ft 7 inch (201 cm)</option
+                    >
+                    <option value="6 ft 8 inch (203 cm)"
+                      >6 ft 8 inch (203 cm)</option
+                    >
+                    <option value="6 ft 9 inch (206 cm)"
+                      >6 ft 9 inch (206 cm)</option
+                    >
+                    <option value="6 ft 10 inch (208 cm)"
+                      >6 ft 10 inch (208 cm)</option
+                    >
+                    <option value="6 ft 11 inch (211 cm)"
+                      >6 ft 11 inch (211 cm)</option
+                    >
+                    <option value="7 ft (213 cm) plus"
+                      >7 ft (213 cm) plus</option
+                    >
+                  </select>
+                  <p
+                    id="Dropdown1_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Complexion
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="Complexion" checktype="c1"
+                    required>
+                    <option value="Light">Light</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Olive">Olive</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Black">Black</option>
+                  </select>
+                  <p
+                    id="Dropdown2_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Body Type
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="BodyType" checktype="c1"
+                    required>
+                    <option value="Thin">Thin</option>
+                    <option value="Fit">Fit</option>
+                    <option value="Average">Average</option>
+                    <option value="Fat">Fat</option>
+                  </select>
+                  <p
+                    id="Dropdown3_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Mother Tongue
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="MotherTongue" checktype="c1"
+                    required>
+                    <option value="Hindi">Hindi</option>
+                    <option value="English">English</option>
+                    <option value="Bengali">Bengali</option>
+                    <option value="Marathi">Marathi</option>
+                    <option value="Telugu">Telugu</option>
+                    <option value="Tamil">Tamil</option>
+                    <option value="Gujarati">Gujarati</option>
+                    <option value="Urdu">Urdu</option>
+                    <option value="Bhojpuri">Bhojpuri</option>
+                    <option value="Kannada">Kannada</option>
+                    <option value="Malayalam">Malayalam</option>
+                    <option value="Odia">Odia</option>
+                    <option value="Punjabi">Punjabi</option>
+                    <option value="Rajasthani">Rajasthani</option>
+                    <option value="Chhattisgarhi">Chhattisgarhi</option>
+                    <option value="Assamese">Assamese</option>
+                    <option value="Maithili">Maithili</option>
+                    <option value="Magadhi/Magahi">Magadhi/Magahi</option>
+                    <option value="Haryanvi">Haryanvi</option>
+                    <option value="Khortha/Khotta">Khortha/Khotta</option>
+                    <option value="Marwari">Marwari</option>
+                    <option value="Santali">Santali</option>
+                    <option value="Kashmiri">Kashmiri</option>
+                    <option value="Bundeli/Bundel Khandi"
+                      >Bundeli/Bundel Khandi</option
+                    >
+                    <option value="Malvi">Malvi</option>
+                    <option value="Sadan/Sadri">Sadan/Sadri</option>
+                    <option value="Mewari">Mewari</option>
+                    <option value="Awadhi">Awadhi</option>
+                    <option value="Wagdi">Wagdi</option>
+                    <option value="Lamani/Lambadi">Lamani/Lambadi</option>
+                    <option value="Pahari">Pahari</option>
+                    <option value="Bhili/Bhilodi">Bhili/Bhilodi</option>
+                    <option value="Hara/Harauti">Hara/Harauti</option>
+                    <option value="Nepali">Nepali</option>
+                    <option value="Gondi">Gondi</option>
+                    <option value="Bagheli/Baghel Khandi"
+                      >Bagheli/Baghel Khandi</option
+                    >
+                    <option value="Sambhalpuri">Sambhalpuri</option>
+                    <option value="Dogri">Dogri</option>
+                    <option value="Garhwali">Garhwali</option>
+                    <option value="Nimadi">Nimadi</option>
+                    <option value="Surjapuri">Surjapuri</option>
+                    <option value="Konkani">Konkani</option>
+                    <option value="Kumauni">Kumauni</option>
+                    <option value="Kurukh/Oraon">Kurukh/Oraon</option>
+                    <option value="Tulu">Tulu</option>
+                    <option value="Manipuri">Manipuri</option>
+                    <option value="Surgujia">Surgujia</option>
+                    <option value="Sindhi">Sindhi</option>
+                    <option value="Bagri">Bagri</option>
+                    <option value="Ahirani">Ahirani</option>
+                    <option value="Banjari">Banjari</option>
+                    <option value="Brajbhasha">Brajbhasha</option>
+                    <option value="Dhundhari">Dhundhari</option>
+                    <option value="Bodo/Boro">Bodo/Boro</option>
+                    <option value="Ho">Ho</option>
+                    <option value="Gojri/Gujjari/Gujar"
+                      >Gojri/Gujjari/Gujar</option
+                    >
+                    <option value="Mundari">Mundari</option>
+                    <option value="Garo">Garo</option>
+                    <option value="Kangri">Kangri</option>
+                    <option value="Khasi">Khasi</option>
+                    <option value="Kachchhi">Kachchhi</option>
+                  </select>
+                  <p
+                    id="Dropdown4_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-section">
+                <h2>Child Details</h2>
+                <p>Enter your child details as requested</p>
+              </li>
+              <li class="zf-radio zf-tempFrmWrapper zf-sideBySide">
+                <label class="zf-labelName"
+                  >Children
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <div class="zf-overflow">
+                        <select class="zf-form-sBox" name="Children" checktype="c1" id="check"
+                          required>
+                          <option value="Yes">Yes</option>
+                          <option selected='true' value="No">No</option>
+                        </select>
+                    <div class="zf-clearBoth"></div>
+                  </div>
+                  <p
+                    id="Radio1_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName">No. of Sons </label>
+                <div class="zf-tempContDiv">
+                  <select
+                    class="zf-form-sBox"
+                    name="NoOfSons"
+                    id="number_1"
+                    checktype="c1"
+                    ><option selected="true" value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <p
+                    id="Dropdown8_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName">No. of Daughters </label>
+                <div class="zf-tempContDiv">
+                  <select
+                    class="zf-form-sBox"
+                    name="NoOfDaughters"
+                    id="number_2"
+                    checktype="c1"
+                    ><option selected="true" value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                  <p
+                    id="Dropdown8_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+
+
+
+
+
+
+
+            <!--
+              <div id="child_1">
+                <li class="zf-radio zf-tempFrmWrapper zf-sideBySide">
+                  <label class="zf-labelName">Gender of Child</label>
+                  <div class="zf-tempContDiv">
+                    <select class="zf-form-sBox" name="gender_1" checktype="c1"
+                      ><option selected="true" value="Son">Son</option>
+                      <option value="Daughter">Daughter</option>
+                    </select>
+                    <p
+                      id="Dropdown8_error"
+                      class="zf-errorMessage"
+                      style="display: none;"
+                    >
+                      Invalid value
+                    </p>
+                  </div>
+                  <div class="zf-clearBoth"></div>
+                </li>
+                <li class="zf-tempFrmWrapper zf-small">
+                  <label class="zf-labelName">Age - Child 1 </label>
+                  <div class="zf-tempContDiv">
+                    <span>
+                      <input
+                        type="number"
+                        name="age_1"
+                        checktype="c2"
+                        value=""
+                        max="18"
+                    /></span>
+                    <p
+                      id="Number_error"
+                      class="zf-errorMessage"
+                      style="display: none;"
+                    >
+                      Invalid value
+                    </p>
+                  </div>
+                  <div class="zf-clearBoth"></div>
+                </li>
+              </div>
+              <div id="child_2">
+                <li class="zf-radio zf-tempFrmWrapper zf-sideBySide">
+                  <label class="zf-labelName">Gender of Child</label>
+                  <div class="zf-tempContDiv">
+                    <select class="zf-form-sBox" name="gender_2" checktype="c1"
+                      ><option selected="true" value="Son">Son</option>
+                      <option value="Daughter">Daughter</option>
+                    </select>
+                    <p
+                      id="Dropdown8_error"
+                      class="zf-errorMessage"
+                      style="display: none;"
+                    >
+                      Invalid value
+                    </p>
+                  </div>
+                  <div class="zf-clearBoth"></div>
+                </li>
+                <li class="zf-tempFrmWrapper zf-small">
+                  <label class="zf-labelName">Age - Child 2 </label>
+                  <div class="zf-tempContDiv">
+                    <span>
+                      <input
+                        type="number"
+                        name="age_2"
+                        checktype="c2"
+                        value=""
+                        max="18"
+                    /></span>
+                    <p
+                      id="Number_error"
+                      class="zf-errorMessage"
+                      style="display: none;"
+                    >
+                      Invalid value
+                    </p>
+                  </div>
+                  <div class="zf-clearBoth"></div>
+                </li>
+              </div>
+              <div id="child_3">
+                <li class="zf-radio zf-tempFrmWrapper zf-sideBySide">
+                  <label class="zf-labelName">Gender of Child</label>
+                  <div class="zf-tempContDiv">
+                    <select class="zf-form-sBox" name="gender_3" checktype="c1"
+                      ><option selected="true" value="Son">Son</option>
+                      <option value="Daughter">Daughter</option>
+                    </select>
+                    <p
+                      id="Dropdown8_error"
+                      class="zf-errorMessage"
+                      style="display: none;"
+                    >
+                      Invalid value
+                    </p>
+                  </div>
+                  <div class="zf-clearBoth"></div>
+                </li>
+                <li class="zf-tempFrmWrapper zf-small">
+                  <label class="zf-labelName">Age - Child 3 </label>
+                  <div class="zf-tempContDiv">
+                    <span>
+                      <input
+                        type="number"
+                        name="age_3"
+                        checktype="c2"
+                        value=""
+                        max="18"
+                    /></span>
+                    <p
+                      id="Number_error"
+                      class="zf-errorMessage"
+                      style="display: none;"
+                    >
+                      Invalid value
+                    </p>
+                  </div>
+                  <div class="zf-clearBoth"></div>
+                </li>
+              </div>
+            -->
+              <li class="zf-tempFrmWrapper zf-section">
+                <h2>Education & Career</h2>
+                <p>
+                  Please fill in your educational and occupational background
+                </p>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Education
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="Education" checktype="c1"
+                    required>
+                    <option value="B.A">B.A</option>
+                    <option value="B.Arch">B.Arch</option>
+                    <option value="B.Com">B.Com</option>
+                    <option value="B.Des">B.Des</option>
+                    <option value="B.E/B.Tech">B.E/B.Tech</option>
+                    <option value="B.Ed">B.Ed</option>
+                    <option value="B.IT">B.IT</option>
+                    <option value="B.Pharma">B.Pharma</option>
+                    <option value="B.Sc">B.Sc</option>
+                    <option value="BAMS">BAMS</option>
+                    <option value="BBA">BBA</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BDS">BDS</option>
+                    <option value="BFA">BFA</option>
+                    <option value="BHM">BHM</option>
+                    <option value="BHMS">BHMS</option>
+                    <option value="BJMC">BJMC</option>
+                    <option value="BL/LLB">BL/LLB</option>
+                    <option value="BPT">BPT</option>
+                    <option value="BVSc.">BVSc.</option>
+                    <option value="CA">CA</option>
+                    <option value="CFA">CFA</option>
+                    <option value="CS">CS</option>
+                    <option value="DM">DM</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="High School">High School</option>
+                    <option value="ICWA">ICWA</option>
+                    <option value="M.A.">M.A.</option>
+                    <option value="M.Arch">M.Arch</option>
+                    <option value="M.Com">M.Com</option>
+                    <option value="M.D.">M.D.</option>
+                    <option value="M.Des">M.Des</option>
+                    <option value="M.E/M.Tech">M.E/M.Tech</option>
+                    <option value="M.Ed">M.Ed</option>
+                    <option value="M.Pharma">M.Pharma</option>
+                    <option value="M.Phil">M.Phil</option>
+                    <option value="M.S(Engineering)">M.S(Engineering)</option>
+                    <option value="M.S(Medicine)">M.S(Medicine)</option>
+                    <option value="M.Sc">M.Sc</option>
+                    <option value="MBA/PGDM">MBA/PGDM</option>
+                    <option value="MBBS">MBBS</option>
+                    <option value="MCA.PGDM">MCA.PGDM</option>
+                    <option value="MBBS">MBBS</option>
+                    <option value="MCA.PGDCA">MCA.PGDCA</option>
+                    <option value="MCh">MCh</option>
+                    <option value="MDS">MDS</option>
+                    <option value="MFA">MFA</option>
+                    <option value="MJMC">MJMC</option>
+                    <option value="ML/LLM">ML/LLM</option>
+                    <option value="MPT">MPT</option>
+                    <option value="MSW">MSW</option>
+                    <option value="MVSc.">MVSc.</option>
+                    <option value="Other">Other</option>
+                    <option value="Ph.D">Ph.D</option>
+                    <option value="Trade School">Trade School</option>
+                  </select>
+                  <p
+                    id="Dropdown5_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Educational Details
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="EducationDetails"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine1_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Occupation
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="Occupation" checktype="c1"
+                    required>
+                    <option value="Private Sector">Private Sector</option>
+                    <option value="Government/Public Sector"
+                      >Government/Public Sector</option
+                    >
+                    <option value="Civil Services">Civil Services</option>
+                    <option value="Defence">Defence</option>
+                    <option value="Business/Self Employed"
+                      >Business/Self Employed</option
+                    >
+                    <option value="Not Working">Not Working</option>
+                  </select>
+                  <p
+                    id="Dropdown6_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Occupational Details
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="OccupationDetails"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine2_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Annual Income
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="AnnualIncome" checktype="c1"
+                    required>
+                    <option value="No income">No income</option>
+                    <option value="0-1 Lac">0-1 Lac</option>
+                    <option value="1-2 Lac">1-2 Lac</option>
+                    <option value="2-3 Lac">2-3 Lac</option>
+                    <option value="3-5 Lac">3-5 Lac</option>
+                    <option value="5-7.5 Lac">5-7.5 Lac</option>
+                    <option value="7.5-10 Lac">7.5-10 Lac</option>
+                    <option value="10-15 Lac">10-15 Lac</option>
+                    <option value="15-20 Lac">15-20 Lac</option>
+                    <option value="20-25 Lac">20-25 Lac</option>
+                    <option value="25-30 Lac">25-30 Lac</option>
+                    <option value="30-35 Lac">30-35 Lac</option>
+                    <option value="35-50 Lac">35-50 Lac</option>
+                    <option value="50-70 Lac">50-70 Lac</option>
+                    <option value="70L-1 Cr">70L-1 Cr</option>
+                    <option value="1cr above">1cr above</option>
+                  </select>
+                  <p
+                    id="Dropdown7_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-section">
+                <h2>Family Background</h2>
+                <p>
+                  Please fill in your family background
+                </p>
+              </li>
+                <li class="zf-tempFrmWrapper zf-small">
+                  <label class="zf-labelName"
+                    >Father's Full Name
+                    <em class="zf-important">*</em>
+                  </label>
+                  <div class="zf-tempContDiv">
+                    <span>
+                      <input
+                        type="text"
+                        name="FatherName"
+                        checktype="c1"
+                        value=""
+                        maxlength="255"
+                        fieldType="1"
+                        required
+                    /></span>
+                    <p
+                      id="SingleLine1_error"
+                      class="zf-errorMessage"
+                      style="display: none;"
+                    >
+                      Invalid value
+                    </p>
+                  </div>
+                  <div class="zf-clearBoth"></div>
+                </li>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Father's Occupation
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="FatherOccupation" checktype="c1"
+                    required>
+                    <option value="Private Sector">Private Sector</option>
+                    <option value="Government/Public Sector"
+                      >Government/Public Sector</option
+                    >
+                    <option value="Civil Services">Civil Services</option>
+                    <option value="Defence">Defence</option>
+                    <option value="Business/Self Employed"
+                      >Business/Self Employed</option
+                    >
+                    <option value="Not Working">Not Working</option>
+                  </select>
+                  <p
+                    id="Dropdown6_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Father's Phone
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv zf-phonefld">
+                  <div class="zf-phwrapper">
+                    <span>
+                      <input
+                        type="tel"
+                        compname="PhoneNumber"
+                        name="FatherMobileNumber"
+                        minlength="10"
+                        maxlength="10"
+                        checktype="c7"
+                        onkeypress="return isNumberKey(event)"
+                        value=""
+                        phoneFormat="1"
+                        isCountryCodeEnabled="true"
+                        fieldType="11"
+                        id="PhoneNumber"
+                        valType="number"
+                        phoneFormatType="2"
+                        required
+                      />
+                      <label>Number</label>
+                    </span>
+                    <div class="zf-clearBoth"></div>
+                  </div>
+                  <p
+                    id="PhoneNumber_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Mother's Full Name
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="MotherName"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine1_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+            </li>
+            <li class="zf-tempFrmWrapper zf-small">
+              <label class="zf-labelName"
+                >Mother's Occupation
+                <em class="zf-important">*</em>
+              </label>
+              <div class="zf-tempContDiv">
+                <select class="zf-form-sBox" name="MotherOccupation" checktype="c1"
+                  required>
+                  <option value="Private Sector">Private Sector</option>
+                  <option value="Government/Public Sector"
+                    >Government/Public Sector</option
+                  >
+                  <option value="Civil Services">Civil Services</option>
+                  <option value="Defence">Defence</option>
+                  <option value="Business/Self Employed"
+                    >Business/Self Employed</option
+                  >
+                  <option value="Not Working">Not Working</option>
+                </select>
+                <p
+                  id="Dropdown6_error"
+                  class="zf-errorMessage"
+                  style="display: none;"
+                >
+                  Invalid value
+                </p>
+              </div>
+              <div class="zf-clearBoth"></div>
+            </li>
+            <li class="zf-tempFrmWrapper zf-small">
+              <label class="zf-labelName"
+                >Mother's Phone
+                <em class="zf-important">*</em>
+              </label>
+              <div class="zf-tempContDiv zf-phonefld">
+                <div class="zf-phwrapper">
+                  <span>
+                    <input
+                      type="tel"
+                      compname="PhoneNumber"
+                      name="MotherMobileNumber"
+                      minlength="10"
+                      maxlength="10"
+                      checktype="c7"
+                      onkeypress="return isNumberKey(event)"
+                      value=""
+                      phoneFormat="1"
+                      isCountryCodeEnabled="true"
+                      fieldType="11"
+                      id="PhoneNumber"
+                      valType="number"
+                      phoneFormatType="2"
+                      required
+                    />
+                    <label>Number</label>
+                  </span>
+                  <div class="zf-clearBoth"></div>
+                </div>
+                <p
+                  id="PhoneNumber_error"
+                  class="zf-errorMessage"
+                  style="display: none;"
+                >
+                  Invalid value
+                </p>
+              </div>
+              <div class="zf-clearBoth"></div>
+            </li>
+            <li class="zf-tempFrmWrapper zf-small">
+              <label class="zf-labelName"
+                >Parent's Address
+                <em class="zf-important">*</em>
+              </label>
+              <div class="zf-tempContDiv">
+                <span>
+                  <input
+                    type="text"
+                    name="ParentAddress"
+                    checktype="c1"
+                    value=""
+                    maxlength="255"
+                    fieldType="1"
+                    required
+                /></span>
+                <p
+                  id="SingleLine1_error"
+                  class="zf-errorMessage"
+                  style="display: none;"
+                >
+                  Invalid value
+                </p>
+              </div>
+              <div class="zf-clearBoth"></div>
+            </li>
+          </li>
+          <li class="zf-tempFrmWrapper zf-small">
+            <label class="zf-labelName"
+              >Family Occupation
+              <em class="zf-important">*</em>
+            </label>
+            <div class="zf-tempContDiv">
+              <span>
+                <input
+                  type="text"
+                  name="FamilyOccupation"
+                  checktype="c1"
+                  value=""
+                  maxlength="255"
+                  fieldType="1"
+                  required
+              /></span>
+              <p
+                id="SingleLine1_error"
+                class="zf-errorMessage"
+                style="display: none;"
+              >
+                Invalid value
+              </p>
+            </div>
+            <div class="zf-clearBoth"></div>
+          </li>
+        </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Annual Family Income
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="AnnualFamilyIncome" checktype="c1"
+                    required>
+                    <option value="No income">No income</option>
+                    <option value="0-1 Lac">0-1 Lac</option>
+                    <option value="1-2 Lac">1-2 Lac</option>
+                    <option value="2-3 Lac">2-3 Lac</option>
+                    <option value="3-5 Lac">3-5 Lac</option>
+                    <option value="5-7.5 Lac">5-7.5 Lac</option>
+                    <option value="7.5-10 Lac">7.5-10 Lac</option>
+                    <option value="10-15 Lac">10-15 Lac</option>
+                    <option value="15-20 Lac">15-20 Lac</option>
+                    <option value="20-25 Lac">20-25 Lac</option>
+                    <option value="25-30 Lac">25-30 Lac</option>
+                    <option value="30-35 Lac">30-35 Lac</option>
+                    <option value="35-50 Lac">35-50 Lac</option>
+                    <option value="50-70 Lac">50-70 Lac</option>
+                    <option value="70L-1 Cr">70L-1 Cr</option>
+                    <option value="1cr above">1cr above</option>
+                  </select>
+                  <p
+                    id="Dropdown7_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName">Unmarried Brothers </label>
+                <div class="zf-tempContDiv">
+                  <select
+                    class="zf-form-sBox"
+                    name="UnmarriedBrothers"
+                    
+                    checktype="c1"
+                    ><option selected="true" value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <p
+                    id="Dropdown8_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName">Unmarried Sisters </label>
+                <div class="zf-tempContDiv">
+                  <select
+                    class="zf-form-sBox"
+                    name="UnmarriedSister"
+                    
+                    checktype="c1"
+                    ><option selected="true" value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <p
+                    id="Dropdown8_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName">Married Brothers </label>
+                <div class="zf-tempContDiv">
+                  <select
+                    class="zf-form-sBox"
+                    name="MarriedBrother"
+                    
+                    checktype="c1"
+                    ><option selected="true" value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <p
+                    id="Dropdown8_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName">Married Sisters </label>
+                <div class="zf-tempContDiv">
+                  <select
+                    class="zf-form-sBox"
+                    name="MarriedSister"
+                    
+                    checktype="c1"
+                    ><option selected="true" value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <p
+                    id="Dropdown8_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-section">
+                <h2>Socio-Religious Background</h2>
+                <p>
+                  Please fill in your socio-religious background as requested
+                </p>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Religion
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="Religion"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine3_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Community
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="Community"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine9_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Caste
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="Caste"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine10_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName">Sub - caste (if applicable) </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="SubCaste"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                  /></span>
+                  <p
+                    id="SingleLine11_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Family Values
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="FamilyValues" checktype="c1"
+                    required>
+                    <option value="Traditional">Traditional</option>
+                    <option value="Western">Western</option>
+                    <option value="Nuclear">Nuclear</option>
+                  </select>
+                  <p
+                    id="Dropdown11_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Eating Habits
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="EatingHabits" checktype="c1"
+                    required>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Non Vegetarian">Non Vegetarian</option>
+                    <option value="Jain">Jain</option>
+                    <option value="Eggetarian">Eggetarian</option>
+                  </select>
+                  <p
+                    id="Dropdown12_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Drinking Habits
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="DrinkingHabits" checktype="c1"
+                    required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Occasionally">Occasionally</option>
+                  </select>
+                  <p
+                    id="Dropdown13_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Smoking Habits
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="SmokingHabits" checktype="c1"
+                    required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Occasionally">Occasionally</option>
+                  </select>
+                  <p
+                    id="Dropdown14_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-section">
+                <h2>Astro Info</h2>
+                <p>Please fill in your astrological details as requested</p>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Sun Sign
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <select class="zf-form-sBox" name="SunSign" checktype="c1"
+                    required>
+                    <option value="Aries/Mesh">Aries/Mesh</option>
+                    <option value="Taurus/Vrishabh">Taurus/Vrishabh</option>
+                    <option value="Gemini/Mithun">Gemini/Mithun</option>
+                    <option value="Cancer/Kark">Cancer/Kark</option>
+                    <option value="Leo/Simha">Leo/Simha</option>
+                    <option value="Virgo/Kanya">Virgo/Kanya</option>
+                    <option value="Libra/Tula">Libra/Tula</option>
+                    <option value="Scorpia/Vrishchick"
+                      >Scorpia/Vrishchick</option
+                    >
+                    <option value="Sagittarius/Dhanu">Sagittarius/Dhanu</option>
+                    <option value="Capricon/Makar">Capricon/Makar</option>
+                    <option value="Aqarius/Kumbh">Aqarius/Kumbh</option>
+                    <option value="Pisces/Meen">Pisces/Meen</option>
+                  </select>
+                  <p
+                    id="Dropdown15_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-time">
+                <label class="zf-labelName"
+                  >Time of Birth
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                      <input
+                       type="time"
+                       name="Time"
+                       value=""
+                       id="settime"
+                       required
+                      />
+                  </span>
+                  <div class="zf-clearBoth"></div>
+                  <p
+                    id="Time_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Country of Birth
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="Country"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine7_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >City of Birth
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="City"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine8_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName"
+                  >Sakha Gotra
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="SakhaGotra"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper">
+                <label class="zf-labelName"
+                  >Manglik
+                  <em class="zf-important">*</em>
+                </label>
+                <div class="zf-tempContDiv">
+                  <div class="zf-overflow">
+                        <select class="zf-form-sBox" name="Manglik" checktype="c1"
+                          required>
+                          <option value="Yes">Yes</option>
+                          <option value="No">No</option>
+                          <option value="Angshik">Angshik</option>
+                        </select>
+                    <div class="zf-clearBoth"></div>
+                  </div>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-section">
+                <h2>Location</h2>
+                <p>Please fill in your location details as requested</p>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName">Citizenship <em class="zf-important">*</em></label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="Citizenship"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine4_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName">Residential Status <em class="zf-important">*</em></label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="ResidentialStatus"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine5_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+              <li class="zf-tempFrmWrapper zf-small">
+                <label class="zf-labelName">Current Residence <em class="zf-important">*</em> </label>
+                <div class="zf-tempContDiv">
+                  <span>
+                    <input
+                      type="text"
+                      name="CurrentResidence"
+                      checktype="c1"
+                      value=""
+                      maxlength="255"
+                      fieldType="1"
+                      required
+                  /></span>
+                  <p
+                    id="SingleLine6_error"
+                    class="zf-errorMessage"
+                    style="display: none;"
+                  >
+                    Invalid value
+                  </p>
+                </div>
+                <div class="zf-clearBoth"></div>
+              </li>
+            </ul>
+          </div>
+          <ul>
+            <li class="zf-fmFooter">
+              <button class="zf-submitColor" type="submit">Submit</button>
+              <br/><br/>
+              <button class="zf-submitColor" type="reset">Reset</button>
+            </li>
+          </ul>
+        </div>
+            
+      </form>
+      <form method = "POST" action="/order" name="payment" id = "payment">
+            <input type="hidden" name="user_name" id = "user_name">
+            <input type="hidden" name="user_mobile" id = "user_mobile" >
+            <input type="hidden" name="itemId" value="SRTicket">
+            <input type="hidden" name="amount" value="20000">
+            <input type="hidden" name="itemDesc" value="Second Rishta Registration Fees">
+      </form>
+    </div>
+    <!-- SPINNER --><div id="loader"></div>
+    <code class="results__display"></code>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      /* $('#Name').on("keyup", function(){
+       $("input[name=user_name]").val($('#Name').val());
+          });
+
+        $('#MobileNumber').on("keyup", function(){
+        $("input[name=user_mobile]").val($('#MobileNumber').val());
+          });
+          */
+         
+
+
+      $("#check")
+        .change(function () {
+          var id = $(this).val();
+          if (id === "Yes") {
+              $("#number_1").prop('disabled', false);
+              $("#number_2").prop('disabled', false);
+          }
+          if (id === "No") {
+            /*
+            $("#child_1").hide();
+            $("#child_2").hide();
+            $("#child_3").hide();
+            */
+            $("#number_1").val('0');
+            $("#number_1").prop('disabled', true);
+            $("#number_2").val('0');
+            $("#number_2").prop('disabled', true);
+          }
+        })
+        .change();/*
+      $("#number")
+        .change(function () {
+          var id = $(this).val();
+          if (id === "0") {
+            $("#child_1").hide();
+            $("#child_2").hide();
+            $("#child_3").hide();
+          }
+          if (id === "1") {
+            $("#child_1").show();
+            $("#child_2").hide();
+            $("#child_3").hide();
+          }
+          if (id === "2") {
+            $("#child_1").show();
+            $("#child_2").show();
+            $("#child_3").hide();
+          }
+          if (id === "3") {
+            $("#child_1").show();
+            $("#child_2").show();
+            $("#child_3").show();
+          }
+        })
+        .change();*/
+        var spinner = $('#loader')
+        
+        const formToJSON = elements => [].reduce.call(elements, (data, element) => 
+        {
+          data[element.name] = element.value;
+          return data;
+        }, {});
+
+        
+        
+            function isNumberKey(evt)
+            {
+              var charCode = (evt.which) ? evt.which : event.keyCode
+              if (charCode > 31 && (charCode < 48 || charCode > 57))
+                 {return false;}
+              return true;
+            }
+          
+        const handleFormSubmit = event => {
+          event.preventDefault();
+          
+         var nameee = document.getElementById("Name").value;
+         var mobilee = document.getElementById("pn").value;
+
+         var form_name = document.getElementById("user_name");
+         var form_mobile = document.getElementById("user_mobile");
+
+         form_name.value = nameee;
+         form_mobile.value = mobilee;
+
+          const data = formToJSON(form.elements);
+        
+          var logoImg = $('input[name="file"]').get(0).files[0];
+          var formData = new FormData();
+          formData.append('file', logoImg);
+          var objArr = [];
+
+          
+
+          //JSON obj
+          formData.append('objArr', JSON.stringify( data, null, " " ))
+          spinner.show()
+          $.ajax({
+            url: 'https://secondrishta.herokuapp.com/api/v1/users',
+            type: "POST",
+            processData:false,
+            contentType: false,
+            data: formData,            
+	    	    success: function(result){  
+            spinner.hide()
+            alert(result.message);
+           // document.getElementById('form').reset();
+           document.getElementById('payment').submit();
+           //$("#payment").submit();
+            console.log('Submitting Form')
+            //location.href = '/payment'
+            
+            },
+           error: function(result){
+             spinner.hide()
+              alert(result.responseJSON.message)
+              
+            }
+      });
+        };
+
+        const form = document.getElementsByClassName('detail-form')[0];
+        form.addEventListener('submit', handleFormSubmit);
+      
+    </script>
+  </body>
+</html>

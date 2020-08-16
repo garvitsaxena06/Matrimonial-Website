@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Payment</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Atharv Sharma">
+  <link href="css/form.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <style>
+        td {
+            padding: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="zf-templateWidth">
+    <div class="zf-templateWrapper">
+        <ul class="zf-tempHeadBdr">
+          <li class="zf-tempHeadContBdr">
+            <h2 class="zf-frmTitle"><em>Second Rishta</em></h2>
+            <p class="zf-frmDesc"></p>
+            <div class="zf-clearBoth"></div>
+          </li>
+        </ul>
+        <div class="zf-subContWrap zf-topAlign">
+
+                <table>
+                  <tr rowspan="3" colspan="2">
+                      <%= desc%><br><br></tr>
+                      <tr>
+                        <td>
+                            Reference ID :
+                        </td>
+                        <td>
+                           <%= refid %>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td>
+                          Name :
+                      </td>
+                      <td>
+                         <%= name %>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        Contact Number :
+                    </td>
+                    <td>
+                       <%= mobilenumber %>
+                    </td>
+                </tr>
+                      <tr>
+                          <td>
+                              Payment :
+                          </td>
+                          <td>
+                            ₹ <%= price %>
+                          </td>
+                      </tr>
+                  </table>
+                  NOTE : Kindly take a screenshot of the following page for future reference.
+                </div>
+                
+    </div>
+
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+</body></html>

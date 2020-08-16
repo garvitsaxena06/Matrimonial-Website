@@ -1,0 +1,46 @@
+{
+  "name": "poc-nodejs",
+  "version": "1.0.0",
+  "description": "POC based on NodeJS Application. Deploy an API to fetch user's data",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aayanksinghai/POC-Nodejs.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Aayank Singhai, Atharv Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aayanksinghai/POC-Nodejs/issues"
+  },
+  "homepage": "https://github.com/aayanksinghai/POC-Nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "express-mongo-sanitize": "^2.0.0",
+    "express-rate-limit": "^5.1.3",
+    "helmet": "^3.23.3",
+    "hpp": "^0.2.3",
+    "mongoose": "^5.9.23",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.4.10",
+    "pdfkit": "^0.11.0",
+    "razorpay": "^2.0.6",
+    "shortid": "^2.2.15",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

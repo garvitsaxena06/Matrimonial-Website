@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Payment</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Second Rishta">
+  <link href="css/form.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <style>
+        td {
+            padding: 5px;
+            font-weight: bold;
+        }
+        .razorpay-payment-button {
+            background:#1AAB8A;
+            color:#fff;
+            border:none;  
+            width: inherit;
+            margin-left: 875px;
+            position:relative;
+            height:60px;
+            font-size:1.6em;
+            padding:0 2em 0 2em;
+            cursor:pointer;
+            transition:800ms ease all;
+            outline:none;
+        }
+        .razorpay-payment-button:hover{
+        background:#fff;
+        color:#1AAB8A;
+        }
+
+        /*MEDIA QUERIES*/
+        @media only screen and (max-width: 768px){
+          .razorpay-payment-button
+          {
+            
+            margin-left: 100px;
+          }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="zf-templateWidth">
+          <div class="zf-templateWrapper">
+              <ul class="zf-tempHeadBdr">
+                  <li class="zf-tempHeadContBdr">
+                    <h2 class="zf-frmTitle"><em>Second Rishta</em></h2>
+                    <p class="zf-frmDesc"></p>
+                    <div class="zf-clearBoth"></div>
+                  </li>
+                </ul>
+                <div class="zf-subContWrap zf-topAlign">
+                  <ul>
+                    <li class="zf-tempFrmWrapper zf-section">
+                      <h2>Proceed to Pay</h2>
+                      <p>A payment of Rs. 200 must be levied before proceeding to registration.</p>
+                    </li>
+            <ul>
+                    <ul>
+                      <li class="zf-tempFrmWrapper zf-section">
+                        <table>
+                            <tr rowspan="3" colspan="2">
+                                <%= desc%><br></tr>
+                                <tr>
+                                    <td>
+                                       Name:
+                                    </td>
+                                    <td>
+                                      <b> <%= name %></b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Mobile Number :
+                                    </td>
+                                    <td>
+                                    <b>   <%= mobilenumber %> </b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Total Amount :
+                                    </td>
+                                    <td>
+                                    <b>  ₹ <%= amnt %> </b>
+                                    </td>
+                                </tr>
+                            </table>
+                      </li>
+                      </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+                  <form action="/success" method="POST">
+                      <script
+                          src="https://checkout.razorpay.com/v1/checkout.js"
+                          data-key="rzp_test_5fOgB6HjoBoO3O" 
+                          data-amount="<%= amnt %>" 
+                          data-currency="INR"
+                          data-order_id="<%= orderId %>"
+                          data-buttontext="Pay ₹<%= amnt %>"
+                          data-name="Second Rishta"
+                          data-prefill.name="<%= name %>"
+                          data-prefill.contact="<%= mobilenumber %>"
+                          data-description="<%= desc %>"
+                          data-image=""
+                          data-theme.color="#528FF0"
+                      ></script>
+                      <input type="hidden" custom="Hidden Element" name="hidden">
+                      </form>
+                </div>
+     </div>
+    </div>
+</div>
+
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+
+
+
+</body>
+</html>
