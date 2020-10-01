@@ -7,6 +7,7 @@ const path = require('path')
 const xss = require('xss-clean')
 const bodyParser = require('body-parser')
 const connectDB = require('./config/db')
+const sendEmail = require('./utils/sendEmail')
 const rateLimit = require('express-rate-limit')
 const hpp = require('hpp')
 const helmet = require('helmet')
@@ -115,24 +116,40 @@ app.post("/order", urlencodedParser, (req, res) => {
      
       instance.orders.fetch(req.body.razorpay_order_id,  (err, order) => {
         // Updating Database with Payment Info
-        User.findOneAndUpdate({ MobileNumber: order.notes[2]}, {Payment: "Yes", PaymentId: req.body.razorpay_payment_id, RazorPayOrderId: req.body.razorpay_order_id}, function
-        (err, result){
-          if(err)
-          {
-          console.log(err)
-          }
-          else{
-          //console.log(result)
-            }
-           })
+        if(!err)
+        {
+            //Updating Payment's Info Values
+            User.findOneAndUpdate({ MobileNumber: order.notes[2]}, {Payment: "Yes", PaymentId: req.body.razorpay_payment_id, RazorPayOrderId: req.body.razorpay_order_id})
 
-        res.render("success", {
-          refid: req.body.razorpay_payment_id,
-          price: order.amount / 100,
-          desc: order.notes[0],
-          name: order.notes[1],
-          mobilenumber: order.notes[2]
-        });
+            User.findOne({MobileNumber: order.notes[2]}, async function(err, dataObj){
+
+                if(!err)
+                {
+                  //Send Email
+                  await sendEmail({
+                  subject: `Second Rishta - ${dataObj.Name}`,
+                  message: `Received an attachment (PDF)`,
+                  filename: `${dataObj.uid}_${dataObj.Name}.pdf`,
+                  path: `${process.env.FILE_UPLOAD_PDF}/${dataObj.uid}_${dataObj.Name}.pdf`
+                  }) 
+
+                  //Redirected to Success Page
+                res.render("success", {
+                  refid: req.body.razorpay_payment_id,
+                  price: order.amount / 100,
+                  desc: order.notes[0],
+                  name: order.notes[1],
+                  mobilenumber: order.notes[2]
+                });
+                }
+            })
+        
+
+        }
+          else
+          {
+            console.error(err)
+          }
       });
     }
   });
