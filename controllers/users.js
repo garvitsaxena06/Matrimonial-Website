@@ -59,16 +59,6 @@ exports.saveUserDetails = async (req, res, next) => {
         //Create PDF Template
         createUserDetails(user, `${uid}_${dataObj.Name}.pdf`, file.name)
 
-        
-        //Send Email
-        await sendEmail({
-            subject: `Second Rishta - ${dataObj.Name}`,
-            message: `Received an attachment (PDF)`,
-            filename: `${uid}_${dataObj.Name}.pdf`,
-            path: `${process.env.FILE_UPLOAD_PDF}/${uid}_${dataObj.Name}.pdf`
-        })
-
-        
         res.status(201).json({ success: true, message: `Your Application has been received!` })
       
         

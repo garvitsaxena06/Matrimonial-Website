@@ -466,6 +466,11 @@ const UserSchema = new mongoose.Schema({
     },
     RazorPayOrderId: {
         type: String
+    },
+
+    //UID - User Identification 
+    uid: {
+        type: String
     }
 
 })
