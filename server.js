@@ -4,6 +4,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 const fileupload = require('express-fileupload')
 const path = require('path')
+const fs = require('fs') 
 const xss = require('xss-clean')
 const bodyParser = require('body-parser')
 const connectDB = require('./config/db')
@@ -141,10 +142,20 @@ app.post("/order", urlencodedParser, (req, res) => {
                   name: order.notes[1],
                   mobilenumber: order.notes[2]
                 });
+
+                 //Deleting the PDF File generated 
+                 fs.unlink(`${process.env.FILE_UPLOAD_PDF}/${dataObj.uid}_${dataObj.Name}.pdf`, (err) => {
+                  if(!err)
+                  {
+                    console.log("File PDF Deleted")
+                  }
+                  else
+                  {
+                    console.error(err)
+                  }
+                })
                 }
             })
-        
-
         }
           else
           {
