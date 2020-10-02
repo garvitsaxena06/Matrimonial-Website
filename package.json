@@ -2,7 +2,7 @@
   "homepage": "https://matrimonial-app1.herokuapp.com/",
   "name": "poc-nodejs",
   "version": "1.0.0",
-  "description": "POC based on NodeJS Application. Deploy an API to fetch user's data",
+  "description": "POC based on NodeJS Application. Backend API for Second Rishta application, which is a user form to generate the BIO-DATA of user.",
   "main": "server.js",
   "scripts": {
     "start": "NODE_ENV=production node server",
