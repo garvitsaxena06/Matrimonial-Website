@@ -1,4 +1,5 @@
 {
+  "homepage": "https://matrimonial-app1.herokuapp.com/",
   "name": "poc-nodejs",
   "version": "1.0.0",
   "description": "POC based on NodeJS Application. Deploy an API to fetch user's data",
@@ -19,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/aayanksinghai/POC-Nodejs/issues"
   },
-  "homepage": "https://github.com/aayanksinghai/POC-Nodejs#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
