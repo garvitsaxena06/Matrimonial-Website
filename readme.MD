@@ -1,7 +1,6 @@
-Live demo available at https://matrimonial-app1.herokuapp.com/
-
 # POC - Second Rishta
 
+> Live demo available at https://matrimonial-app1.herokuapp.com/
 > Backend API for Second Rishta application, which is a user form to generate the BIO-DATA of user
 
 ## Usage
